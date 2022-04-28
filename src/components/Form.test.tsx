@@ -8,7 +8,11 @@ interface FormProps {
 
 test('render Form', () => {
 
-    // render(<Form onNewSub={onNewSub: Form} />)
+  const testHandleSub = (newSub: Sub): void =>{
 
-    // expect(container.querySelector('form')).toEqual("hola")
+  }
+
+    render(<Form onNewSub={testHandleSub} />);
+    const formTest = screen.getByText(/Save new subs/);
+    expect(formTest).toBeInTheDocument();
 })
